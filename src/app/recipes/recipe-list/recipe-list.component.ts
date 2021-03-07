@@ -22,10 +22,7 @@ export class RecipeListComponent implements OnInit {
 
   onRecipeItemClick(index:number)
   {
-    //this.recipeService.recipeSelected.emit(recipe);
-    this.router.
-    navigate(['recipes',index]);
-    //this.recipeItemSelected.emit(recipe);
+    this.router.navigate(['recipes',index]);
   }
 
 }

@@ -1,0 +1,23 @@
+<form (ngSubmit)="onAddButtonClick(shopForm)" #shopForm="ngForm">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required ngModel  class="form-control">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" required name="amount" ngModel class="form-control">
+      </div>
+    </div>
+  </div>
+
+
+  <div >
+    <button class="btn btn-success" [disabled]="shopForm.invalid" type="submit">{{editMode? 'Edit' : 'Add'}}</button>
+    <button class="btn btn-danger" *ngIf="editMode" style="margin-left:5px;" (click)="onDelete()" type="button">Delete</button>
+    <button class="btn btn-primary" style="margin-left:5px;" (click)="onClear()" type="button">Clear</button>
+  </div>
+</form>

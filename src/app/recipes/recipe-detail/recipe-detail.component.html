@@ -1,0 +1,18 @@
+<div class="" *ngIf="selectedRecipe">
+  <img [src]="selectedRecipe.imgPath" alt="" style="max-height: 200px; display: block;margin-bottom: 5px;">
+  <h2>{{selectedRecipe.name}}</h2>
+  <p>{{selectedRecipe.desc}}</p>
+
+
+  <p>Below are the Ingredients:</p>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let ingredient of selectedRecipe.ingredients">
+      {{ingredient.name}}({{ingredient.amount}})
+    </li>
+  </ul>
+  <div style="margin-top: 10px;" class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-success" (click)="toShoppingList()">To Shopping List</button>
+    <button type="button" class="btn btn-primary" (click)="onEditClick()">Edit Recipe</button>
+    <button type="button" class="btn btn-danger" (click)="onDeleteRecipe()">Delete Recipe</button>
+  </div>
+</div>

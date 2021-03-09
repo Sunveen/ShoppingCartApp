@@ -1,0 +1,9 @@
+.effects:hover{
+  color:lightblue;
+
+}
+
+.effects{
+  color:black;
+  transition: color 1s ease-in-out;
+}

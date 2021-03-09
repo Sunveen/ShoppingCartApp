@@ -10,6 +10,7 @@ import { ShoppingService } from '../shopping-list/shopping.service';
 export class RecipeService {
 
   recipeListUpdated= new Subject<Recipe[]>();
+  selectedRecipeIdx= new Subject<number>();
 
   constructor(private shoppingService:ShoppingService) { }
 

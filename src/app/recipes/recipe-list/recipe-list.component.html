@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div *ngFor="let recipe of recipes; let i=index" class="recipe-item">
       <ul class="list-group">
-        <li class="list-group-item" >
+        <li class="list-group-item onHover" [ngClass]="id==i?'highlight':''">
           <app-recipe-item
             [recipe]="recipe"
             (click)="onRecipeItemClick(i)">

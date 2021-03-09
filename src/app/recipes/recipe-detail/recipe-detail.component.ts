@@ -18,6 +18,8 @@ export class RecipeDetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(params=>{
       this.selectedRecipe= this.recipeService.getRecipeById(+params['id']);
       this.id= +params['id'];
+      this.recipeService.selectedRecipeIdx.next(this.id);
+      //console.log(this.id);
       });
   }
 
